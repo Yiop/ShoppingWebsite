@@ -32,7 +32,7 @@ public class Product {
 	private double quantity;
 	private String description;
 	private int category;
-	
+	private String img;
 	
 	
 	
@@ -40,11 +40,8 @@ public class Product {
 		
 	}
 
-	
-
-
 	public Product(int id, @NotEmpty(message = "Product name can not be empty.") String name, double cost,
-			CartItem cartItem, double quantity, String description, int category) {
+			CartItem cartItem, double quantity, String description, int category, String img) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -53,7 +50,13 @@ public class Product {
 		this.quantity = quantity;
 		this.description = description;
 		this.category = category;
+		this.img = img;
 	}
+
+
+
+
+
 
 
 
@@ -118,6 +121,15 @@ public class Product {
 	public void setCategory(int category) {
 		this.category = category;
 	}
+
+	public String getImg() {
+		return img;
+	}
+
+	public void setImg(String img) {
+		this.img = img;
+	}
+	
 	
 	
 	
